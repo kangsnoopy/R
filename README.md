@@ -1,2 +1,0 @@
-# R
-big data analytics
