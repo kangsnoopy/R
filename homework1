@@ -28,3 +28,11 @@
 > MSE_Moving_Average_7=sum((Moving_Average_7-centered_return)^2)/nrow(data)
 > MSE_Autoregressive=sum((Autoregressive-centered_return)^2)/nrow(data)
 #MSE_Exponential_smoother_2 is the best
+#in the model n=2,α=2/3
+#Y’T+1lT=(1-α)YT+αY’TlT-1
+#Y’T+1lT=1/3*YT+2/3*Y’TlT-1
+#
+#
+#
+#
+#
