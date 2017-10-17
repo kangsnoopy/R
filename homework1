@@ -1,0 +1,30 @@
+> library(readr)
+> data <- read_csv("C:/Users/shawn/Desktop/weekly return.csv")
+> View(data)
+> weekly_return=data$`weekly return`
+> date=data$Time
+> centered_return=weekly_return-sum(weekly_return)/nrow(data)
+> squared_return=weekly_return^2
+> centered_squared=squared_return-sum(squared_return)/nrow(data)
+> Moving_Average_2=SMA(centered_return,n=2)
+> Moving_Average_3=SMA(centered_return,n=3)
+> Moving_Average_5=SMA(centered_return,n=5)
+> Moving_Average_7=SMA(centered_return,n=7)
+> Exponential_Smoother_2=EMA(centered_return,n=2)
+> Exponential_Smoother_3=EMA(centered_return,n=3)
+> Exponential_Smoother_5=EMA(centered_return,n=5)
+> Exponential_Smoother_7=EMA(centered_return,n=7)
+> arima(centered_return,order=c(1,0,0),include.mean =F,method=c("CSS") )
+> Autoregressive=0.5226*centered_return
+> Exponential_Smoother_3[is.na(Exponential_Smoother_3)]<- -4.816
+> Exponential_Smoother_5[is.na(Exponential_Smoother_5)]<- -4.816
+> Exponential_Smoother_7[is.na(Exponential_Smoother_7)]<- -4.816
+> Moving_Average_3[is.na(Moving_Average_3)]<- -4.816
+> Moving_Average_5[is.na(Moving_Average_5)]<- -4.816
+> Moving_Average_7[is.na(Moving_Average_7)]<- -4.816
+> MSE_Moving_Average_2=sum((Moving_Average_2-centered_return)^2)/nrow(data)
+> MSE_Moving_Average_3=sum((Moving_Average_3-centered_return)^2)/nrow(data)
+> MSE_Moving_Average_5=sum((Moving_Average_5-centered_return)^2)/nrow(data)
+> MSE_Moving_Average_7=sum((Moving_Average_7-centered_return)^2)/nrow(data)
+> MSE_Autoregressive=sum((Autoregressive-centered_return)^2)/nrow(data)
+#MSE_Exponential_smoother_2 is the best
