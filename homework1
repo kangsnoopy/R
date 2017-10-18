@@ -53,3 +53,15 @@
 > MSFE_Exponential_Smoother_3=sum((Exponential_Smoother_3[38:52]-centered_return[38:52])^2)/15
 > MSFE_Exponential_Smoother_5=sum((Exponential_Smoother_5[38:52]-centered_return[38:52])^2)/15
 > MSFE_Exponential_Smoother_7=sum((Exponential_Smoother_7[38:52]-centered_return[38:52])^2)/15
+> plot(Time,centered_return,type='l',col=2)
+> lines(Time,Moving_Average_2,type='l',col=3)
+> lines(Time,Moving_Average_3,type='l',col=4)
+> lines(Time,Moving_Average_5,type='l',col=5)
+> lines(Time,Moving_Average_7,type='l',col=6)
+> plot(Time,centered_return,type='l',col=2)
+> lines(Time,Exponential_Smoother_2,type='l',col=3)
+> lines(Time,Exponential_Smoother_3,type='l',col=4)
+> lines(Time,Exponential_Smoother_5,type='l',col=5)
+> plot(Time,centered_return,type='l',col=2)
+> lines(Time,Autoregressive,type='l',col=3)
+> lines(Time,Exponential_Smoother_7,type='l',col=6)
