@@ -10,7 +10,7 @@
 > Moving_Average_3[1:37]=SMA(centered_return[1:37],n=3)
 > Moving_Average_5[1:37]=SMA(centered_return[1:37],n=5)
 > Moving_Average_7[1:37]=SMA(centered_return[1:37],n=7)
-> [1:37]=EMA(centered_return[1:37],n=2)
+> Exponential_Smoother_2[1:37]=EMA(centered_return[1:37],n=2)
 > Exponential_Smoother_3[1:37]=EMA(centered_return[1:37],n=3)
 > Exponential_Smoother_5[1:37]=EMA(centered_return[1:37],n=5)
 > Exponential_Smoother_7[1:37]=EMA(centered_return[1:37],n=7)
